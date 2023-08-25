@@ -12,10 +12,10 @@ namespace NewRegistrationWebApp
 {
     public partial class Login : System.Web.UI.Page
     {
-      SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyCon"].ConnectionString);
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyCon"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
-             
+
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace NewRegistrationWebApp
                     Response.Write("<script> alert('Login Sucessfully'); </script>");
                     // rd.Read();
                     // Labelinfo.Text = "Login successful.";
-                  Response.Redirect("Dashboard.aspx");
+                    Response.Redirect("Dashboard.aspx");
                 }
                 else
                 {
@@ -64,7 +64,7 @@ namespace NewRegistrationWebApp
         protected void Forget_Click(object sender, EventArgs e)
         {
             Response.Redirect("ForgetPassword.aspx");
-          //  Response.Write("<script> alert('Password Reset Successfully') </script>");
+            //  Response.Write("<script> alert('Password Reset Successfully') </script>");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

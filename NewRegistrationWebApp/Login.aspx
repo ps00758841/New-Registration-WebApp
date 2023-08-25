@@ -41,7 +41,7 @@
                     </div>
                 </div>
 
-                <asp:Button ID="btnLogin" runat="server" Text="click to open registration page" CssClass="btn btn-primary" Height="56px" OnClick="btnLogin_Click" Width="404px" />
+                <!--<asp:Button ID="btnLogin1" runat="server" Text="click to open registration page" CssClass="btn btn-primary" Height="56px" OnClick="btnLogin_Click" Width="404px"/>-->
                
                 <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100 " style="text-align:end;margin-top:390px">
                     <div class="container-fluid">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </footer>
-            </div>
+                </div>
             
         </div>
     </form>

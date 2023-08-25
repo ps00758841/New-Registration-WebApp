@@ -30,15 +30,15 @@ namespace NewRegistrationWebApp
             {
                 if (TextPassword.Text == TextConfirmpassword.Text)
                 {
-                   
+
 
                     //code for file upload profile picture
                     string path;
                     if (FileUploadProfilepicture.HasFile)
                         FileUploadProfilepicture.SaveAs(HttpContext.Current.Request.PhysicalApplicationPath + "image/" + FileUploadProfilepicture.FileName);
-                    path=FileUploadProfilepicture.FileName;
-                           //end 
-                           SqlCommand cmd = new SqlCommand("registration_Insert", con); //registration insert is stored procedure where we store data in table (table name=Registration)
+                    path = FileUploadProfilepicture.FileName;
+                    //end 
+                    SqlCommand cmd = new SqlCommand("registration_Insert", con); //registration insert is stored procedure where we store data in table (table name=Registration)
                     con.Open(); //for opening database connection 
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Firstname", TextFirstname.Text);
@@ -64,7 +64,7 @@ namespace NewRegistrationWebApp
                         // showAlert();
 
                         Response.Write("<script> alert('Registered Sucessfully'); </script>");
-                       // Thread.Sleep(2000);
+                        // Thread.Sleep(2000);
                         //Response.Redirect("Login.aspx");
                     }
                 }
@@ -72,10 +72,11 @@ namespace NewRegistrationWebApp
                 {
                     Response.Write("<script> alert('Password not match! Please try again'); </script>");
                 }
+                
             }
 
-            
-        }
+        } 
+        
 
                   protected void btnLogin_Click(object sender, EventArgs e)
         {

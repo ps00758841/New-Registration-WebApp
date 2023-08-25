@@ -139,7 +139,7 @@
                     </div>               
                         
                 </div>
-                       <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary" Height="50px" Text="LoginButtonPage" OnClick="btnLogin_Click" />
+                       <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary" Height="50px" Text="LoginButtonPage" OnClick="btnLogin_Click" Width="398px" />
             
                        <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100 " style="text-align:end;margin-top:390px">
                           <div class="container-fluid">
