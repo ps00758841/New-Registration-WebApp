@@ -7,19 +7,24 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
+using System.Net.Sockets;
+using System.Threading;
+using System.Xml.Linq;
 
 namespace NewRegistrationWebApp
 {
     public partial class Login : System.Web.UI.Page
     {
+         
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyCon"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           // var data1 = document.getElementById('MainContent_TextBox1').textContent;
         }
 
         protected void Unnamed3_Click(object sender, EventArgs e)
         {
+
 
             if (TxtLoginUsername.Text == "" || TxtLoginPassword.Text == "")
             {
@@ -27,7 +32,6 @@ namespace NewRegistrationWebApp
             }
             else
             {
-
 
 
                 string strcon = "Data Source=DESKTOP-SCJV9e2\\SQLEXPRESS02;Initial Catalog=DEMO;Integrated Security=True;";
@@ -42,13 +46,12 @@ namespace NewRegistrationWebApp
                 com.Parameters.Add(p2);
 
                 SqlDataReader rd = com.ExecuteReader();
-
+               // Response.Write("<script> alert('Login Sucessfully'); </script>");
                 if (rd.HasRows)
                 {
-                    Response.Write("<script> alert('Login Sucessfully'); </script>");
-                    // rd.Read();
-                    // Labelinfo.Text = "Login successful.";
-                    Response.Redirect("Dashboard.aspx");
+
+                   popupDiv.Visible = true;
+                   
                 }
                 else
                 {
@@ -70,6 +73,16 @@ namespace NewRegistrationWebApp
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("Signup.aspx");
+        }
+
+        protected void BacktoRegister(object sender, EventArgs e)
+        {
+            Response.Redirect("Signup.aspx");
+        }
+
+        protected void done_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Dashboard.aspx");
         }
     }
 }

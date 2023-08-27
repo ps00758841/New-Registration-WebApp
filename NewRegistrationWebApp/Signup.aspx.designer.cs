@@ -96,6 +96,15 @@ namespace NewRegistrationWebApp
         protected global::System.Web.UI.WebControls.TextBox TextZip;
 
         /// <summary>
+        /// AOF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AOF;
+
+        /// <summary>
         /// CheckBoxAreaofinterest1 control.
         /// </summary>
         /// <remarks>
@@ -175,5 +184,23 @@ namespace NewRegistrationWebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
+
+        /// <summary>
+        /// popupDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl popupDiv;
+
+        /// <summary>
+        /// doneReg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button doneReg;
     }
 }

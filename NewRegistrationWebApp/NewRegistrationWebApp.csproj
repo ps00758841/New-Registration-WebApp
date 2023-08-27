@@ -70,6 +70,7 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="ForgetPassword.aspx" />
     <Content Include="GridViewDemo.aspx" />
+    <Content Include="Grid_View_Demo.aspx" />
     <Content Include="Helper\css\custom.css" />
     <Content Include="Helper\css\orionicons.css" />
     <Content Include="Helper\css\style.blue.css" />
@@ -284,6 +285,13 @@
     </Compile>
     <Compile Include="GridViewDemo.aspx.designer.cs">
       <DependentUpon>GridViewDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Grid_View_Demo.aspx.cs">
+      <DependentUpon>Grid_View_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grid_View_Demo.aspx.designer.cs">
+      <DependentUpon>Grid_View_Demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

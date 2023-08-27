@@ -30,7 +30,29 @@ namespace NewRegistrationWebApp
             {
                 if (TextPassword.Text == TextConfirmpassword.Text)
                 {
+                    String[] checkBox_result = { }; String result="";
 
+                    //code for checkbox
+                    if (CheckBoxAreaofinterest1.Checked)
+                    {
+                        result = result + CheckBoxAreaofinterest1.Text.ToString() + ",";
+
+
+                    } if (CheckBoxAreaofinterest2.Checked)
+                    {
+                        result = result + CheckBoxAreaofinterest2.Text.ToString() + ",";
+
+                    }
+                     if (CheckBoxAreaofinterest3.Checked)
+                    {
+                        result = result + CheckBoxAreaofinterest3.Text.ToString() + ",";
+                    }
+                     if (CheckBoxAreaofinterest4.Checked)
+                    {
+                        result = result + CheckBoxAreaofinterest4.Text.ToString() + ",";
+
+                    }
+                   
 
                     //code for file upload profile picture
                     string path;
@@ -51,7 +73,7 @@ namespace NewRegistrationWebApp
                     cmd.Parameters.AddWithValue("@Zip", TextZip.Text);
                     cmd.Parameters.AddWithValue("@State", DropDownListState.Text);
                     cmd.Parameters.AddWithValue("@Country", DropDownListCountry.Text);
-                    cmd.Parameters.AddWithValue("@Areaofinterest", CheckBoxAreaofinterest1.Text);
+                    cmd.Parameters.AddWithValue("@Areaofinterest", result.ToString());
                     cmd.Parameters.AddWithValue("@ProfilePicture", path);
 
 
@@ -61,11 +83,9 @@ namespace NewRegistrationWebApp
 
                     if (i > 0)
                     {
-                        // showAlert();
-
-                        Response.Write("<script> alert('Registered Sucessfully'); </script>");
-                        // Thread.Sleep(2000);
-                        //Response.Redirect("Login.aspx");
+                        popupDiv.Visible = true;
+                       
+                       // Response.Redirect("Login.aspx");
                     }
                 }
                 else
@@ -78,9 +98,20 @@ namespace NewRegistrationWebApp
         } 
         
 
-                  protected void btnLogin_Click(object sender, EventArgs e)
+          protected void btnLogin_Click(object sender, EventArgs e)
         {
-                         Response.Redirect("Login.aspx");
+                  Response.Redirect("Login.aspx");
+        }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+
+        }
+
+        protected void done_ClickReg(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }
